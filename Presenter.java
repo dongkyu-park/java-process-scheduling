@@ -5,9 +5,9 @@ public class Presenter {
         StringBuilder sb = new StringBuilder();
 
         toDoList.stream().forEach((i) -> sb.append(i.getProcessType() + "(" + i.getProcessState() + "), "
-        + i.getPCB().getCompleteWorkProgress() + " / " + i.getTotalWorkProgress() + "sec\n"));
+        + i.getPCB().getWorkProgress() + " / " + i.getEndWorkProgress() + "sec\n"));
         completeList.stream().forEach((i) -> sb.append(i.getProcessType() + "(" + i.getProcessState() + "), "
-                + i.getPCB().getCompleteWorkProgress() + " / " + i.getTotalWorkProgress() + "sec\n"));
+                + i.getPCB().getWorkProgress() + " / " + i.getEndWorkProgress() + "sec\n"));
         sb.append("...\n");
 
         return sb;
@@ -16,7 +16,7 @@ public class Presenter {
     public StringBuilder convertProcessToMessage(Process workingProcess) {
         StringBuilder sb = new StringBuilder();
         sb.append(workingProcess.getProcessType() + "(" + workingProcess.getProcessState() + "), "
-                + workingProcess.getPCB().getCompleteWorkProgress() + " / " + workingProcess.getTotalWorkProgress()
+                + workingProcess.getPCB().getWorkProgress() + " / " + workingProcess.getEndWorkProgress()
                 + "sec\n");
 
         return sb;

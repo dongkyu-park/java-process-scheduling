@@ -52,7 +52,7 @@ public class Processor {
     }
 
     private boolean isCompleteWork(Process workingProcess) {
-        return workingProcess.getPCB().getCompleteWorkProgress() == workingProcess.getTotalWorkProgress();
+        return workingProcess.getPCB().getWorkProgress() == workingProcess.getEndWorkProgress();
     }
 
     private void printProcesses() {

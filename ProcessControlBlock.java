@@ -1,11 +1,11 @@
 public class ProcessControlBlock {
-    int completeWorkProgress = 0;
+    int workProgress = 0;
 
-    public int getCompleteWorkProgress() {
-        return completeWorkProgress;
+    public int getWorkProgress() {
+        return workProgress;
     }
 
     public void goWorkProgress() {
-        this.completeWorkProgress++;
+        this.workProgress++;
     }
 }
